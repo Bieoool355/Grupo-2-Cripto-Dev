@@ -6,7 +6,10 @@ contract ContratoGrupo2 {
   string public appName;
 
   uint public amountMaterial = 0;
-
+   //realacionar os endereços com o materialBalance
+  //mapping(address => uint256) public materialBalance;
+  
+   //mapping faz referência do materials com o objeto em si (struct: Material)
   mapping(uint => Material) public materials;
 
   struct Material{
@@ -36,6 +39,14 @@ contract ContratoGrupo2 {
     bool sold
   );
 
+  event UpdateMaterial (
+    uint idUpdateMaterial,
+    string nameUpdateMaterial,
+    string descriptionUpdateMaterial,
+    uint priceUpdateMaterial,
+    address payable owner,
+    bool updated
+  );
 
   constructor() {
     appName = "dAPP Lar do concreto";
@@ -62,6 +73,10 @@ contract ContratoGrupo2 {
   }
   // Função para a compra de material
   function buyMaterial(uint _idMaterial) public payable {
+
+    //O balance está para o materialBalance do mapping
+    //uint256 balance = materialBalance[address(this)];
+
     //Dúvida: ele passa os ids de forma automática? Como os ids sao criados??? A gente teria que fazer na mao????
     // Dúvida: o Produto do mapping é o mesmo que o produto do objeto??
     // Armazenar os ids dos produtos em um array
@@ -102,18 +117,16 @@ contract ContratoGrupo2 {
     //Evento do produto vendido (colocamos como true, pois inicialmente ele era false)
     //Dúvida: porquê precisa do evento??? O que ele faz? Pq os nomes dos parametros sao os do struct?
     emit SoldMaterial(amountMaterial, _material.nameMaterial, _material.descriptionMaterial, _material.priceMaterial, payable(msg.sender), true);
-    
+
   }
 
+    function update(uint _idMaterial, string memory _nameMaterial, string memory _descriptionMaterial, uint _priceMaterial) public {
 
+      materials[amountMaterial] = Material(_idMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender),false);
+      
+      emit UpdateMaterial(amountMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender), false);
 
-
-
-
-
-
-
-
+    }
 
 
 }
