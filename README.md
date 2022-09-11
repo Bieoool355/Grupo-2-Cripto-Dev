@@ -16,7 +16,7 @@ Realizado em grupo pelos seguintes participantes:
   </tr>
 </table>
 
-<h4>Status: Developing ⚠️</h4>
+<h4 align="center">Status: Developing ⚠️</h4>
 
 # Configuração inicial para seu contrato
 
