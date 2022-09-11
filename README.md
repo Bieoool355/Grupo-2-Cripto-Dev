@@ -16,6 +16,13 @@ Realizado em grupo pelos seguintes participantes:
   </tr>
 </table>
 
+### Link da apresentação
+<table>
+  <tr>
+    <td align="center"><a href="https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img style="border-radius: 50%;"/><br /><sub><b>Apresentação</b></sub></a><br /></td>
+  </tr>
+</table>
+
 <h4 align="center">Status: Developing ⚠️</h4>
 
 # Configuração inicial para seu contrato
@@ -73,12 +80,6 @@ docker stop $(docker ps -aq)
 
 docker rm $(docker ps -aq)
 ```
-### Link da apresentação
-<table>
-  <tr>
-    <td align="center"><a href="https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img style="border-radius: 50%;"/><br /><sub><b>Apresentação</b></sub></a><br /></td>
-  </tr>
-</table>
 
 ## Instruções de Instalação e Utilização
 
@@ -103,7 +104,16 @@ npx hardhat test
 ```
 ## Técnicas e Tecnologias Utilizadas
 
-<table>
+<table>	
+ <tr>
+    <th>
+      <a href="https://trello.com">
+        <img alt="Trello Official Website" src="https://blog.saninternet.com/wp-content/uploads/2017/11/como-ser-mais-produtivo-trello-SECNET-868x488-1.jpg"
+             width="200" height="106"/>
+      </a>
+    </th>
+    <th>Organizamos nossas tarefas através da plataforma Trello</th>
+  </tr>	
   <tr>
     <th>
       <a href="https://docs.soliditylang.org/en/v0.8.15/">
@@ -140,7 +150,7 @@ npx hardhat test
       </a>
     </th>
     <th>Utilizamos o ambiente de desenvolvimento Hardhat<br>
-	para realização dos testes unitários</th>
+	para realizar os testes unitários</th>
   </tr>
   <tr>
     <th>
@@ -149,16 +159,7 @@ npx hardhat test
              width="200" height="100"/>
       </a>
     </th>
-    <th>Precisamos do compilador Visual Studio Code para<br>
-	nosso ambiente de testes</th>
-  </tr>
-  <tr>
-    <th>
-      <a href="https://trello.com">
-        <img alt="Trello Official Website" src="https://blog.saninternet.com/wp-content/uploads/2017/11/como-ser-mais-produtivo-trello-SECNET-868x488-1.jpg"
-             width="200" height="106"/>
-      </a>
-    </th>
-    <th>Organizamos nossas tarefas através da plataforma Trello</th>
+    <th>Também usamos a famosa IDE Visual Studio Code para<br>
+	nosso ambiente de testes e edição do contrato</th>
   </tr>
 </table>
