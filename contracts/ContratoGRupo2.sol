@@ -47,7 +47,7 @@ contract ContratoGrupo2 {
 
   constructor() {
     appName = "dAPP Lar do concreto";
-      owner = payable(msg.sender);
+    owner = payable(msg.sender);   
   }
 
   // Função de estoque com a criação do produto e reabastecimento
@@ -124,7 +124,7 @@ contract ContratoGrupo2 {
 
 
    function withdraw(uint _amount) external {
-        require(address(this).balance >= _amount, "A maquina nao tem ether o suficiente!");
+        require(address(this).balance >= _amount, unicode"ERRO: Não thá ether o suficiente na máquina!");
         owner.transfer(_amount * 1 ether);
    }
 
