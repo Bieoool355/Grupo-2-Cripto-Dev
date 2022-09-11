@@ -24,7 +24,7 @@ Realizado em grupo pelos seguintes participantes:
 
 - Startup and configuration demo project with NodeJS
 
-### Run this started app
+### Rodar o aplicativo iniciado
 
 ```shell
 npm start
@@ -32,7 +32,7 @@ npm start
 npm run test
 ```
 
-### Git & npm commands
+### Comandos do Git e NPM
 
 ```shell
 npm init
@@ -52,7 +52,7 @@ npm install express
 npm install jest -D
 ```
 
-### Docker commands
+### Comandos do Docker
 
 ```shell
 docker-compose up --build
@@ -62,7 +62,7 @@ docker build -t started-nodejs .
 docker volume create --name nodemodules
 ```
 
-### Removing volumes, services and containers
+### Remoção de volumes, serviços e contêineres
 
 ```shell
 docker rm app 
