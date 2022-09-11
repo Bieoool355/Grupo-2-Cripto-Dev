@@ -80,3 +80,85 @@ docker rm $(docker ps -aq)
   </tr>
 </table>
 
+## Instruções de Instalação e Utilização
+
+###### Ambientes
+
+- O contrato da Máquina de Vendas poderá ser testado através da plataforma [Remix IDE](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null)
+
+###### Testes
+- A execução dos testes deve ser feita em um compilador como [VS Code](https://code.visualstudio.com)
+- Tenha em sua máquina a versão recomendada do [Node](https://nodejs.org/en/)
+- Através do prompt de comando (famoso CMD), execute os comandos a seguir no diretório do projeto:
+```shell
+npm install
+npx hardhat compile
+npx hardhat test
+```
+- Caso já tenha yarn global na máquina, apenas modifique o npm:
+```shell
+yarn install
+npx hardhat compile
+npx hardhat test
+```
+## Técnicas e Tecnologias Utilizadas
+
+<table>
+  <tr>
+    <th>
+      <a href="https://docs.soliditylang.org/en/v0.8.15/">
+        <img alt="Solidity v0.8.15 homepage" src="https://avantrio.xyz/blog/wp-content/uploads/2020/02/solidity-nedir.png"
+             width="200" height="82"/>
+      </a>
+    </th>
+    <th>Nossos smart contracts estão desenvolvidos em Solidity </th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null">
+        <img alt="Remix - Ethereum IDE" src="https://i.imgur.com/Nq1ImZp.jpg"
+             width="200" height="80"/>
+      </a>
+    </th>
+    <th>Realizamos todos os testes de execução na plataforma Remix IDE </th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://github.com">
+        <img alt="GitHub" src="https://sempreupdate.com.br/wp-content/uploads/2021/08/genexus.jpg"
+             width="200" height="106"/>
+      </a>
+    </th>
+    <th>O código fonte do projeto e versionamento, bem como <br>
+	esta documentação estão armazenados no GitHub</th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://hardhat.org">
+        <img alt="Hardhat - Ethereum development environment for professionals" src="https://hardhat.org/card.jpg"
+             width="200" height="106"/>
+      </a>
+    </th>
+    <th>Utilizamos o ambiente de desenvolvimento Hardhat<br>
+	para realização dos testes unitários</th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://code.visualstudio.com">
+        <img alt="Visual Studio Code - Code Editing. Redefined" src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/vscode.png"
+             width="200" height="100"/>
+      </a>
+    </th>
+    <th>Precisamos do compilador Visual Studio Code para<br>
+	nosso ambiente de testes</th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://trello.com">
+        <img alt="Trello Official Website" src="https://blog.saninternet.com/wp-content/uploads/2017/11/como-ser-mais-produtivo-trello-SECNET-868x488-1.jpg"
+             width="200" height="106"/>
+      </a>
+    </th>
+    <th>Organizamos nossas tarefas através da plataforma Trello</th>
+  </tr>
+</table>
