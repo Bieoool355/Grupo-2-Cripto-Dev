@@ -3,7 +3,7 @@ O intuito deste projeto é criar um Smart Contract de uma Vending Machine em Sol
 
 ------------------------
 
-_O projeto foi idealizado em *JavaScript** e **Solidity**._
+_O projeto foi idealizado em **JavaScript** e **Solidity**._
 
 Realizado em grupo pelos seguintes participantes:
 
