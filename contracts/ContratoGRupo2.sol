@@ -2,13 +2,13 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract ContratoGrupo2 {
-
+  address payable public owner;
   string public appName;
-
   uint public amountMaterial = 0;
   //mapping faz referência do materials com o objeto em si (struct: Material)
   mapping(uint => Material) public materials;
-
+  mapping(address => uint256) public materialBalance;
+  
   struct Material{
     uint idMaterial;
     string nameMaterial;
@@ -36,9 +36,18 @@ contract ContratoGrupo2 {
     bool sold
   );
 
+  event UpdateMaterial (
+    uint idUpdateMaterial,
+    string nameUpdateMaterial,
+    string descriptionUpdateMaterial,
+    uint priceUpdateMaterial,
+    address payable owner,
+    bool updated
+  );
 
   constructor() {
     appName = "dAPP Lar do concreto";
+      owner = payable(msg.sender);
   }
 
   // Função de estoque com a criação do produto e reabastecimento
@@ -105,11 +114,19 @@ contract ContratoGrupo2 {
     emit SoldMaterial(amountMaterial, _material.nameMaterial, _material.descriptionMaterial, _material.priceMaterial, payable(msg.sender), true);
     
   }
+    function update(uint _idMaterial, string memory _nameMaterial, string memory _descriptionMaterial, uint _priceMaterial) public {
+
+      materials[amountMaterial] = Material(_idMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender),false);
+      
+      emit UpdateMaterial(amountMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender), false);
+
+    }
 
 
-
-
-
+   function withdraw(uint _amount) external {
+        require(address(this).balance >= _amount, "A maquina nao tem ether o suficiente!");
+        owner.transfer(_amount * 1 ether);
+   }
 
 
 
