@@ -124,7 +124,7 @@ contract ContratoGrupo2 {
 
 
    function withdraw(uint _amount) external {
-        require(address(this).balance >= _amount, unicode"ERRO: Não thá ether o suficiente na máquina!");
+        require(address(this).balance >= _amount, unicode"ERRO: Não há ether o suficiente na máquina!");
         owner.transfer(_amount * 1 ether);
    }
 
