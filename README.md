@@ -11,6 +11,8 @@ Realizado em grupo pelos seguintes participantes:
 * [Maria Luíza](https://github.com/MariaLuizaDMoura)
 * [Gabriel Lúcio](https://github.com/Bieoool355)
 
+<h4 align="center">Status: Developing ⚠️</h4>
+
 # Configuração inicial para seu contrato
 
 ## Setup NodeJS
@@ -66,3 +68,5 @@ docker stop $(docker ps -aq)
 
 docker rm $(docker ps -aq)
 ```
+### Link da apresentação
+![Canva Badge](https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
