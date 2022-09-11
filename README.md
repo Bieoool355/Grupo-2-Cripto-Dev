@@ -1,5 +1,5 @@
 # Grupo-2-Cripto-Dev
-O intuito deste projeto é criar um Smart Contract de uma Vending Machine em Solidity.
+<h3>O intuito deste projeto é criar um Smart Contract de uma Vending Machine em Solidity.<h3>
 
 ------------------------
 
@@ -20,7 +20,7 @@ Realizado em grupo pelos seguintes participantes:
 
 # Configuração inicial para seu contrato
 
-## Setup NodeJS
+### Setup NodeJS
 
 - Startup and configuration demo project with NodeJS
 
