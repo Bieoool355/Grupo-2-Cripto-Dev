@@ -74,5 +74,9 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 ```
 ### Link da apresentação
-![Solidity Badge](https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+<table>
+  <tr>
+    <td align="center"><a href="https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img style="border-radius: 50%;"/><br /><sub><b>Apresentação</b></sub></a><br /></td>
+  </tr>
+</table>
 
