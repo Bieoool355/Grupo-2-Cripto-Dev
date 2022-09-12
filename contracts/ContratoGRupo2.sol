@@ -61,36 +61,34 @@ contract ContratoGrupo2 {
 
     materials[amountMaterial] = Material(amountMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender), false);
 
-    
     emit CreatedMaterial(amountMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender), false);
 
   }
     
   function buyMaterial(uint _idMaterial) public payable {
     
-    Material memory _material = materials[_idMaterial]; 
-
-    address payable _seller = _material.owner;
+    Material memory _material = materials[_idMaterial];    
 
     require(_material.idMaterial > 0 && _material.idMaterial <= amountMaterial, unicode"ERRO: id do material inválido.");
   
     require(msg.value >= _material.priceMaterial, unicode"ERRO: Não há dinheiro suficiente para a transação");
 
-    require(!_material.sold, unicode"ERRO: Esse produto já foi vendido.");
-    
-    require(_seller != msg.sender, unicode"ERRO: Não é possível transferir para o mesmo endereço.");
-    
+    require(!_material.sold, unicode"ERRO: Esse produto já foi vendido.");  
+      
     _material.owner = payable(msg.sender);
     
     _material.sold = true;
     
     materials[_idMaterial] = _material;
-    
-    payable(_seller).transfer(msg.value);
      
     emit SoldMaterial(amountMaterial, _material.nameMaterial, _material.descriptionMaterial, _material.priceMaterial, payable(msg.sender), true);
     
   }
+
+  function getBalance() public view returns (uint256) {
+    return address(this).balance;
+  }
+
   function update(uint _idMaterial, string memory _nameMaterial, string memory _descriptionMaterial, uint _priceMaterial) public {
 
     materials[amountMaterial] = Material(_idMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender),false);
