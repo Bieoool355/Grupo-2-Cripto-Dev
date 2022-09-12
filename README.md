@@ -67,33 +67,13 @@ npm install express
 npm install jest -D
 ```
 
-### Comandos do Docker
-
-```shell
-docker-compose up --build
-
-docker build -t started-nodejs .
-
-docker volume create --name nodemodules
-```
-
-### Remoção de volumes, serviços e contêineres
-
-```shell
-docker rm app 
-
-docker volume rm nodemodules
-
-docker stop $(docker ps -aq)
-
-docker rm $(docker ps -aq)
-```
-
 ## Instruções de Instalação e Utilização
 
 ###### Ambientes
 
 - O contrato da Máquina de Vendas poderá ser testado através da plataforma [Remix IDE](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null)
+	
+- Realizamos o deploy e disponibilizamos na rede de testes [Rinkeby Etherscan](https://rinkeby.etherscan.io/address/0x66ec5ba46c10930ad22fd03401796e485e55396c)
 
 ###### Testes
 - A execução dos testes deve ser feita em um compilador como [VS Code](https://code.visualstudio.com)
@@ -147,11 +127,23 @@ function buyMaterial{
 emit SoldMaterial}
 ~~~
 	
-* Assim como a função atualizar que podemos alterar o valor do produto a venda na máquina
+* Assim como a função atualizar que podemos alterar o valor, o nome e a descrição do produto a venda na máquina
 
 ~~~solidity
 function update{
 emit UpdateMaterial}
+~~~
+	
+* Uma outra função bacana é a getBalance pois retorna o balanço financeiro da máquina de vendas
+	
+~~~solidity
+function getBalance	
+~~~
+	
+* Em paralelo temos também a restock, funcionalidade na qual é responsável pelo reabastecimento de Ether na Machine
+	
+~~~solidity
+function restockEther	
 ~~~
 	
 * E por último mas não menos importante, a função de saque para que o dono da Vending Machine possa sacar o saldo da mesma
@@ -217,7 +209,7 @@ function withdraw
              width="200" height="80"/>
       </a>
     </th>
-    <th>O ganache foi utilizado para fazer alguns testes localmente</th>
+    <th>O Truffle foi um framework utilizado para fazer alguns testes localmente</th>
   </tr>
   <tr>
     <th>
