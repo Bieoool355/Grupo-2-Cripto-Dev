@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-contract ContratoGrupo2 {
+contract ContratoGrupo2Final {
   address payable public owner;
   string public appName;
   uint public amountMaterial = 0;
