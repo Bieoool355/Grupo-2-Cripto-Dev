@@ -3,7 +3,14 @@
 
 ------------------------
 
-_O projeto foi idealizado em **JavaScript** e **Solidity**._
+O projeto foi idealizado em _**Solidity**_,
+e o objetivo final é inaugurar uma loja no Metaverso chamada _**Lar do Concreto**_.
+Como podem imaginar, é uma loja de material de construção, afinal, se existem infinitas
+possibilidades através da tecnologia com NFTs relacionadas a terrenos e outros itens,
+porque não vender o material para que os usuários montem suas residências conforme
+desejarem? <br>
+O produto inicial seria o Combo Concreto - 3 itens em um único Token - 
+Areia, Brita e Cimento.
 
 Realizado em grupo pelos seguintes participantes:
 
@@ -103,7 +110,7 @@ npx hardhat compile
 npx hardhat test
 ```
 	
-### Principais funcionalidades da Vending Machine
+### Principais funcionalidades da nossa Vending Machine
 	
 * Utilizamos o mapping, por exemplo, fazendo referência entre o nosso `materials` 
 
@@ -128,22 +135,22 @@ event UpdateMaterial
 * Temos nossa função de inventário, que cuida da criação e reabastecimento do estoque de produtos
 
 ~~~solidity
-function inventory
-emit CreatedMaterial
+function inventory {
+emit CreatedMaterial}
 ~~~
 
 * Também temos a função de compra de material, na qual trata da transação e suas nuances
 	
 ~~~solidity
-function buyMaterial
-emit SoldMaterial
+function buyMaterial{
+emit SoldMaterial}
 ~~~
 	
 * Assim como a função atualizar que podemos alterar o valor do produto a venda na máquina
 
 ~~~solidity
-function update
-emit UpdateMaterial
+function update{
+emit UpdateMaterial}
 ~~~
 	
 * E por último mas não menos importante, a função de saque para que o dono da Vending Machine possa sacar o saldo da mesma
