@@ -102,6 +102,22 @@ yarn install
 npx hardhat compile
 npx hardhat test
 ```
+	
+### Principais funcionalidades da Vending Machine
+	
+Utilizamos o mapping, por exemplo, fazendo referência entre o nosso `materials` 
+
+
+~~~solidity
+mapping(uint => Material) public materials;	
+~~~
+
+e nosso objeto em si
+	
+~~~solidity
+struct Material
+~~~	
+	
 ## Técnicas e Tecnologias Utilizadas
 
 <table>	
