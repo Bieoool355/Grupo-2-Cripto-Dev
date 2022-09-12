@@ -107,7 +107,7 @@ contract ContratoGrupo2 {
   function restokEther() public payable {
       require(msg.sender == owner, unicode"ERRO: Somente o owner pode reabastecer."
       );
-      require(msg.value >= 1 wei, unicode"ERRO: O valor mínimo para reabastecer é de 1 wei"
+      require(msg.value >= 1 wei, unicode"ERRO: Valor inválido, o mínimo para reabastecer é de 1 wei"
       );
   }
 
