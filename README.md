@@ -171,7 +171,7 @@ function withdraw
              width="200" height="82"/>
       </a>
     </th>
-    <th>Nossos smart contracts estão desenvolvidos em Solidity </th>
+    <th>O smart contract foi desenvolvido em Solidity </th>
   </tr>
   <tr>
     <th>
@@ -180,9 +180,9 @@ function withdraw
              width="200" height="80"/>
       </a>
     </th>
-    <th>Realizamos todos os testes de execução na plataforma Remix IDE </th>
+    <th>Realizamos todos os testes de execução na plataforma Remix IDE</th>
   </tr>
-  <tr>
+<tr>
     <th>
       <a href="https://github.com">
         <img alt="GitHub" src="https://sempreupdate.com.br/wp-content/uploads/2021/08/genexus.jpg"
@@ -192,17 +192,7 @@ function withdraw
     <th>O código fonte do projeto e versionamento, bem como <br>
 	esta documentação estão armazenados no GitHub</th>
   </tr>
-  <tr>
-    <th>
-      <a href="https://hardhat.org">
-        <img alt="Hardhat - Ethereum development environment for professionals" src="https://hardhat.org/card.jpg"
-             width="200" height="106"/>
-      </a>
-    </th>
-    <th>Utilizamos o ambiente de desenvolvimento Hardhat<br>
-	para realizar os testes unitários</th>
-  </tr>
-  <tr>
+<tr>
     <th>
       <a href="https://code.visualstudio.com">
         <img alt="Visual Studio Code - Code Editing. Redefined" src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/vscode.png"
@@ -211,5 +201,23 @@ function withdraw
     </th>
     <th>Também usamos a famosa IDE Visual Studio Code para<br>
 	nosso ambiente de testes e edição do contrato</th>
+  </tr>
+<tr>
+    <th>
+      <a href="https://trufflesuite.com/ganache/">
+        <img alt="Truffle Suite - Ganache" src="https://trufflesuite.com/img/truffle-logo-light.svg"
+             width="200" height="80"/>
+      </a>
+    </th>
+    <th>O ganache foi utilizado para fazer alguns testes localmente</th>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://rinkeby.etherscan.io">
+        <img alt="Etherscan Rinkeby Testnet Network" src="https://etherscan.io/images/brandassets/etherscan-logo.png"
+             width="190" height="60"/>
+      </a>
+    </th>
+    <th>Para o deploy foi utilizada a rede de testes Rinkeby da Etherscan</th>
   </tr>
 </table>
