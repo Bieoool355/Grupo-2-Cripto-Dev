@@ -105,8 +105,7 @@ npx hardhat test
 	
 ### Principais funcionalidades da Vending Machine
 	
-Utilizamos o mapping, por exemplo, fazendo referência entre o nosso `materials` 
-
+* Utilizamos o mapping, por exemplo, fazendo referência entre o nosso `materials` 
 
 ~~~solidity
 mapping(uint => Material) public materials;	
@@ -116,7 +115,42 @@ e nosso objeto em si
 	
 ~~~solidity
 struct Material
-~~~	
+~~~
+	
+* Criamos os eventos dos diferentes momentos do nosso *Material*
+	
+~~~solidity
+event CreatedMaterial
+event SoldMaterial
+event UpdateMaterial
+~~~
+	
+* Temos nossa função de inventário, que cuida da criação e reabastecimento do estoque de produtos
+
+~~~solidity
+function inventory
+emit CreatedMaterial
+~~~
+
+* Também temos a função de compra de material, na qual trata da transação e suas nuances
+	
+~~~solidity
+function buyMaterial
+emit SoldMaterial
+~~~
+	
+* Assim como a função atualizar que podemos alterar o valor do produto a venda na máquina
+
+~~~solidity
+function update
+emit UpdateMaterial
+~~~
+	
+* E por último mas não menos importante, a função de saque para que o dono da Vending Machine possa sacar o saldo da mesma
+	
+~~~solidity
+function withdraw	
+~~~
 	
 ## Técnicas e Tecnologias Utilizadas
 
