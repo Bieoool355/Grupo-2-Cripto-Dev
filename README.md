@@ -24,13 +24,13 @@ Realizado em grupo pelos seguintes participantes:
 </table>
 
 ### Link da apresentação
-<table>
+<table align="center">
   <tr>
-    <td align="center"><a href="https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img style="border-radius: 50%;"/><br /><sub><b>Apresentação</b></sub></a><br /></td>
+    <td><a href="https://www.canva.com/design/DAFGzjjB-6g/UsURT1yKFx5kU5ibbYnjJw/edit?utm_content=DAFGzjjB-6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img style="border-radius: 50%;"/><br /><sub><b>Apresentação</b></sub></a><br /></td>
   </tr>
 </table>
 
-<h4 align="center">Status: Developing ⚠️</h4>
+<h4 align="center">Status: Concluded ✔️</h4>
 
 # Configuração inicial para seu contrato
 
