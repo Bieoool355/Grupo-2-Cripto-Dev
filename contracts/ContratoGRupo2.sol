@@ -19,28 +19,28 @@ contract ContratoGrupo2 {
   }
 
   event CreatedMaterial(
-    uint idCreatedMaterial,
-    string nameCreatedMaterial,
-    string descriptionCreatedMaterial,
-    uint priceCreatedMaterial,
+    uint idMaterial,
+    string nameMaterial,
+    string descriptionMaterial,
+    uint priceMaterial,
     address payable owner,
     bool sold
   );
 
   event SoldMaterial (
-    uint idSoldMaterial,
-    string nameSoldMaterial,
-    string descriptionSoldMaterial,
-    uint priceSoldMaterial,
+    uint idMaterial,
+    string nameMaterial,
+    string descriptionMaterial,
+    uint priceMaterial,
     address payable owner,
     bool sold
   );
 
   event UpdateMaterial (
-    uint idUpdateMaterial,
-    string nameUpdateMaterial,
-    string descriptionUpdateMaterial,
-    uint priceUpdateMaterial,
+    uint idMaterial,
+    string nameMaterial,
+    string descriptionMaterial,
+    uint priceMaterial,
     address payable owner,
     bool updated
   );
@@ -72,18 +72,14 @@ contract ContratoGrupo2 {
   }
   // Função para a compra de material
   function buyMaterial(uint _idMaterial) public payable {
-    // Dúvida: ele passa os ids de forma automática? Como os ids sao criados??? A gente teria que fazer na mao???? R: são criados automaticamente mesmo
-    // Dúvida: o Produto do mapping é o mesmo que o produto do objeto?? R: o do mapping é uma referência ao objeto
     // Armazenar os ids dos produtos em um array
     Material memory _material = materials[_idMaterial]; // [exemplo pratico do indice sendo usado para buscar o id do produto]
 
     // Setar o dono do produto, o vendedor será o dono do produto
     address payable _seller = _material.owner;
 
-    //Dúvida: como vou verificar se o produto tem um id válido e eu nem setei o id?
-    // Verificação: se o produto possui um id válido
-    // Dúvida: esse idMAterial é diferente do _idMaterial da linha 55 e o da linha 59? R: é diferente mesmo
-    // Dúvida: ????
+    
+    // Verificação: se o produto possui um id válido   
     require(_material.idMaterial > 0 && _material.idMaterial <= amountMaterial, unicode"ERRO: id do material inválido.");
     
     //Verificação: se há dinheiro suficiente para realizar a transação
@@ -99,7 +95,7 @@ contract ContratoGrupo2 {
     _material.owner = payable(msg.sender);
 
     // Setar que o produto foi vendido
-    //_material.sold = true;
+    _material.sold = true;
 
     //Dúvida: não entendemos como isso aqui funciona R: o produto na venda está igualando ao produto armazenado no estoque, direcionando para tira-lo do armazenamento
     // Atualizar o estoque (depois ver se iremos colocar em outra função)
@@ -123,9 +119,13 @@ contract ContratoGrupo2 {
     }
 
 
-   function withdraw(uint _amount) external {
+  //  function withdraw(uint _amount) external {
+  //       require(address(this).balance >= _amount, unicode"ERRO: Não há ether o suficiente na máquina!");
+  //       owner.transfer(_amount * 1 ether);
+  //  }
+   function withdraw(uint _amount) external {        
         require(address(this).balance >= _amount, unicode"ERRO: Não há ether o suficiente na máquina!");
-        owner.transfer(_amount * 1 ether);
+        payable(owner).transfer(_amount);
    }
 
 
