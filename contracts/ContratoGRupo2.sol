@@ -55,6 +55,8 @@ contract ContratoGrupo2 {
 
     require(_priceMaterial > 0, unicode"ERRO: Preço inválido, insira um valor maior que zero");
 
+    require(msg.sender == owner, unicode"ERRO: Somente o ownere pode inserir um produto.");
+
     amountMaterial ++;
 
     materials[amountMaterial] = Material(amountMaterial, _nameMaterial, _descriptionMaterial, _priceMaterial, payable(msg.sender), false);
