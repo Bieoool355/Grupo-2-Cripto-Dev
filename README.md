@@ -9,6 +9,7 @@ Como podem imaginar, é uma loja de material de construção, afinal, se existem
 possibilidades através da tecnologia com NFTs relacionadas a terrenos e outros itens,
 porque não vender o material para que os usuários montem suas residências conforme
 desejarem? <br>
+<br>
 O produto inicial seria o Combo Concreto - 3 itens em um único Token - 
 Areia, Brita e Cimento.
 
